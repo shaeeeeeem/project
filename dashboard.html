@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <title>Mediconnect-dashboard</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div class="login-container">
+      <h1>welcome to your dashboard</h1>
+      <p>Hello:<span id="fullname"></span></p>
+      <p>your age:<span id="userAge"></span></p>
+
+      <button onclick="logout()" class="btn">Logout</button>
+    </div>
+    <script>
+      const fname=localStorage.getItem("userFrame");     
+      const lname=localStorage.getItem("userLrame");
+      const age=localStorage.getItem("userAge");
+
+      document.getElementById("fullname").textContent=fname + "" + lname;
+      document.getElementById("userAge").textContent=age;
+
+      function logout(){
+        localStorage.clear();
+        window.location.href="index.html";
+      }
+    </script>
+  </body>
+</html>

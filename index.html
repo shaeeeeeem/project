@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <title>Mediconnect-Login</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="logo">+</div>
+      <h1>MEDICONNECT</h1>
+      <p class="welcome">welcome back! Please sign in.</p>
+
+      <form id="loginForm">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="e.g.,rsh.@clinic.com" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+
+        <button type="submit" class="btn">Login</button>
+        <button type="submit" class="btn">Sign In</button>
+      </form>
+      <div class="divider">Or continue with</div>
+
+      <button class="btn faceid-btn">
+        <span class="faceid-icon"></span>Sign in with Face ID
+        </button>
+        </div>
+  
+
+  <script> 
+    document.getElementById("loginForm").addEventListener("submit",function(e)
+    {
+      e.preventDefault();
+      
+      const email=document.getElementById("email").value;
+      const password=document.getElementById("password").value;
+
+      if(email && password){
+      localStorage.setItem("userEmail",email);
+      window.location.href="profile.html";
+      }else{
+        alert("please fill in both fields");
+      }
+    });
+
+  </script>
+  </body>
+
+
+
+</html>
