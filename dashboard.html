@@ -16,11 +16,11 @@
       <button onclick="logout()" class="btn">Logout</button>
     </div>
     <script>
-      const fname=localStorage.getItem("userFrame");     
-      const lname=localStorage.getItem("userLrame");
+      const fname=localStorage.getItem("userFname");     
+      const lname=localStorage.getItem("userLname");
       const age=localStorage.getItem("userAge");
 
-      document.getElementById("fullname").textContent=fname + "" + lname;
+      document.getElementById("fullname").textContent=fname + " " + lname;
       document.getElementById("userAge").textContent=age;
 
       function logout(){
